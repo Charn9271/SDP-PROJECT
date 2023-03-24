@@ -1,0 +1,65 @@
+{% extends 'index.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block 'title' %}
+        View Users
+        {% endblock %}
+    </title>
+</head>
+<body>
+
+<h3 align="center">Django with Form Handling, MVT, Template Inheritance, Session, Cookies, Email, ModelForms</h3>
+<hr color="black"><hr color="black">
+<br>
+
+
+<br><br>
+
+{% block 'body' %}
+
+<h2 align="center" style="color:white;"><u>View Registered Users</u></h2>
+
+Total Registered Users = {{count}}  <br>
+
+<table align="center" border="2">
+    <tr style="font-weight:bold" >
+        <td style="color:white;">ID</td>
+        <td style="color:white;">Full Name</td>
+        <td style="color:white;">Gender</td>
+        <td style="color:white;" >Date of Birth</td>
+        <td style="color:white;">EMAIL ID</td>
+        <td style="color:white;">Username</td>
+        <td style="color:white;">Loction</td>
+        <td style="color:white;">Contact No</td>
+        <td style="color:white;">Registration Time</td>
+        <td style="color:white;">Action</td>
+    </tr>
+
+    {% for user in users %}
+    <tr>
+        <td style="color:#00FA9A;">{{user.id}}</td>
+        <td style="color:white;">{{user.fullname}}</td>
+        <td style="color:white;">{{user.gender}}</td>
+        <td style="color:white;">{{user.dateofbirth}}</td>
+        <td style="color:white;">{{user.email}}</td>
+        <td style="color:white;">{{user.username}}</td>
+        <td style="color:white;">{{user.location}}</td>
+        <td style="color:white;">{{user.contact}}</td>
+        <td style="color:white;">{{user.registrationtime}}</td>
+        <td>
+
+            <a href="/deleteuser/{{user.id}}" style="color:#FF0000;" >Delete</a>
+
+        </td>
+
+    </tr>
+    {% endfor %}
+
+</table>
+
+{% endblock %}
+
+</body>
+</html>

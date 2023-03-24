@@ -1,0 +1,177 @@
+{% load static %}
+<html>
+<head>
+     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <meta charset="UTF-8">
+    <title>
+        {% block 'title' %}
+         Home
+        {% endblock %}
+    </title>
+    <style>
+body {
+height: 100%;
+  background-image: url("https://img.freepik.com/free-vector/watercolor-galaxy-background_79603-2384.jpg?size=626&ext=jpg");
+   background-position: center;
+
+    background-repeat: no-repeat;
+     background-size: cover;
+      margin-top: 100px;
+  margin-bottom: 500px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+</style>
+    <style>
+
+* {
+   box-sizing: border-box;
+}
+.imageColumn {
+   float: left;
+   width: 25%;
+   padding: 10px;
+}
+
+        .navbar{
+            background-color: #B95889;
+            border-radius: 30px;
+
+        }
+        .navbar ul{
+            overflow: auto;
+        }
+        .navbar li{
+            float:left;
+            list-style: none;
+            margin: 13px 20px;
+
+        }
+        .navbar li a{
+            padding: 3px 3px;
+            text-decoration: none;
+            color: black;
+        }
+        .navbar li a:hover{
+            color: white
+        }
+        .search{
+            float: right;
+            color: white;
+            padding: 12px 75px;
+        }
+        .navbar input{
+            border: 2px solid black;
+            border-radius: 14px;
+            padding: 3px 17px;
+            width: 129px;
+        }
+        .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+}
+    </style>
+
+    <style>
+
+body {
+  font-size: 16px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+
+</head>
+<body>
+
+<h1 align=center style="color:white;">✨🌙Astrology Prediction System🌙✨</h1>
+<!--<hr color="black"><hr color="black">-->
+<br>
+<header>
+        <nav class="navbar">
+            <ul>
+              <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'registration' %}">Registration</a>&nbsp;&nbsp;</li>
+                <li><a href="{% url 'userlogin' %}">Login</a>&nbsp;</li>
+                <li><a href="{% url 'viewusers' %}">View Users</a>&nbsp;</li>
+                <li><a href="{% url  'checksign'%}">Check Sign</a></li>
+                <li><a href="{% url 'about' %}"> About</a></li>
+<!--                <li><a href="{% url 'logindemo' %}">Login Demo</a>&nbsp;&nbsp;</li>-->
+                <!--<li><a href="{% url 'formdemo' %}">Form Handling</a>&nbsp;</li>-->
+                <!--<li><a href="{% url 'addemployee' %}">Add Employee</a>&nbsp;&nbsp;</li>-->
+<!--                <li><a href="{% url 'adddepartment' %}">Add Department</a></li>-->
+<!--                <li><a href="{% url 'updatedepartment' %}">Update Department</a></li>-->
+<!--                <li><a href="{% url 'setcookies' %}">Set Cookies</a></li>-->
+<!--                <li><a href="{% url 'getcookies' %}">Get Cookies</a></li>-->
+            </ul>
+        </nav>
+</header>
+
+<br><br>
+
+ {% block 'body' %}
+       <h2 style="color:#FF0000;" >Welcome to Astrology Predictions </h2>
+ {% endblock %}
+
+<button onclick="topFunction()" id="myBtn" title="Go to top"> Go To Top</button>
+
+
+
+<script>
+//Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 100) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+</body>
+
+
+<footer class="page-footer font-small blue">
+
+  <!-- Copyright -->
+ <center > <div class="footer-copyright text-center py-3" style="color:white;">© 2023 Copyright:
+    <a href="/" style="color:white;">✨🌙 My Astrology 🌙✨</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<section class=" w3-container w3-center w3-content w3-container" style="max-width:10000px">
+  <center><h2 class="w3-wide" style="color:white;">My Astrology🌙✨</h2> </center>
+  <center> <p style="color:white; class="w3-opacity"><i>"“Astrology is just a finger pointing at reality.”</i></p></center>
+</section>
+</html>

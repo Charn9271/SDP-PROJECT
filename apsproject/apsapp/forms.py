@@ -9,7 +9,7 @@ class RegistrationForm(forms.ModelForm):
         model = Registration
         fields = "__all__"    # it will display all the fields in the form except default fields like id and registrationtime
         widgets = {"password":forms.PasswordInput(),"dateofbirth":DateInput()}    # additional features of the fields
-        labels = {"gender":"Select Gender","Contact":"Provide Contact No"}  #using this, we can change label name in the form
+        labels = {"gender":"Select Gender", "Contact":"Provide Contact No"}  #using this, we can change label name in the form
         #exclude = {"gender"}       #using this, we can hide the fields in the form
 
 class DepartmentForm(forms.ModelForm):

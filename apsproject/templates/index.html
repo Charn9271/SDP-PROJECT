@@ -1,7 +1,11 @@
 {% load static %}
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/zodic.js' %}"></script>
     <meta charset="UTF-8">
     <title>
         {% block 'title' %}
@@ -10,14 +14,16 @@
     </title>
     <style>
 body {
+font-size: 16px;
 height: 100%;
   background-image: url("https://img.freepik.com/free-vector/watercolor-galaxy-background_79603-2384.jpg?size=626&ext=jpg");
    background-position: center;
 
     background-repeat: no-repeat;
      background-size: cover;
+     background-attachment: fixed;
       margin-top: 100px;
-  margin-bottom: 500px;
+  margin-bottom: 100px;
   margin-right: 50px;
   margin-left: 50px;
 }
@@ -76,9 +82,6 @@ height: 100%;
 
     <style>
 
-body {
-  font-size: 16px;
-}
 
 #myBtn {
   display: none;
@@ -151,6 +154,8 @@ function scrollFunction() {
     mybutton.style.display = "none";
   }
 }
+
+
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {

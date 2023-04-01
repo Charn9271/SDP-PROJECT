@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<h3 align="center">Django with Form Handling, MVT, Template Inheritance, Session, Cookies, Email, ModelForms</h3>
+<h3 align="center">hi</h3>
 <hr color="black"><hr color="black">
 <br>
 
@@ -21,12 +21,12 @@
 
 {% block 'body' %}
 
-<h3 align="center"><u>Registration</u></h3>
+<h3 align="center" color="white"><u>Registration</u></h3>
 
 <center>
 <form method="post">
     {% csrf_token %}
-{{form.as_p}}
+{{ form.as_p }}
     <br>
     <input type="submit" value="Register" class="button">
 </form>

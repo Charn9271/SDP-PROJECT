@@ -14,15 +14,15 @@ class Employee(models.Model):
 
 class Registration(models.Model):
     id=models.AutoField(primary_key=True)
-    fullname=models.CharField(max_length=100,blank=False)
+    fullname=models.CharField(max_length=20,blank=False)
     gender_choices=( ("M","Male") , ("F","Female") , ("Others","Prefer not to say") )
     gender=models.CharField(blank=False,choices=gender_choices,max_length=10)
     dateofbirth=models.CharField(blank=False,max_length=20)
     email=models.EmailField(max_length=100,blank=False,unique=True)
     username=models.CharField(max_length=100,blank=False,unique=True)
     password = models.CharField(max_length=100, blank=False)
-    contact = models.BigIntegerField(blank=False, unique=True)
-    location = models.CharField(max_length=100, blank=False)
+    contact = models.BigIntegerField(blank=False, unique=True, max_length=10)
+    # location = models.CharField(max_length=100, blank=False)
     registrationtime=models.DateTimeField(blank=False,auto_now=True)
 
     class Meta:

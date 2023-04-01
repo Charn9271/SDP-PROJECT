@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-    <script src="{% static 'js/zodic.js' %}"></script>
+    <script src="{% static 'js/zodiac.js' %}"></script>
     <meta charset="UTF-8">
     <title>
         {% block 'title' %}
@@ -16,7 +16,7 @@
 body {
 font-size: 16px;
 height: 100%;
-  background-image: url("https://img.freepik.com/free-vector/watercolor-galaxy-background_79603-2384.jpg?size=626&ext=jpg");
+  background-image: url("https://assets.telegraphindia.com/telegraph/2022/Dec/1671526825_1648491419_astrology.jpg");
    background-position: center;
 
     background-repeat: no-repeat;
@@ -105,7 +105,7 @@ height: 100%;
 </style>
 
 </head>
-<body>
+<body style="min-height:1000px;">
 
 <h1 align=center style="color:white;">✨🌙Astrology Prediction System🌙✨</h1>
 <!--<hr color="black"><hr color="black">-->
@@ -133,7 +133,9 @@ height: 100%;
 <br><br>
 
  {% block 'body' %}
+<div>
        <h2 style="color:#FF0000;" >Welcome to Astrology Predictions </h2>
+</div>
  {% endblock %}
 
 <button onclick="topFunction()" id="myBtn" title="Go to top"> Go To Top</button>
@@ -174,9 +176,10 @@ function topFunction() {
   </div>
   <!-- Copyright -->
 
-</footer>
+
 <section class=" w3-container w3-center w3-content w3-container" style="max-width:10000px">
   <center><h2 class="w3-wide" style="color:white;">My Astrology🌙✨</h2> </center>
   <center> <p style="color:white; class="w3-opacity"><i>"“Astrology is just a finger pointing at reality.”</i></p></center>
 </section>
+     </footer>
 </html>

@@ -1,13 +1,6 @@
-body
-{
-background-color:white
-}
-body
-{
-background-color:white
-}
+
  .button {
-  background-color: black;
+  background-color: #46C646;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -48,13 +41,16 @@ body{
      font-family: 'Lato', sans-serif;
      font-size:20px;
      text-align:center;
+min-height: 100vh;
    }
 
    #characteristic {
 
       margin: auto;
        width: 60%;
-   color:orange;
+       line-height: 30px;
+       background-color: #151B54;
+   color:white;
        padding: 21px;
    }
 
@@ -64,7 +60,7 @@ body{
      animation-timing-function: ease-in-out;
      animation-iteration-count: infinite;
      animation-direction: alternate;
-    cursor: url("http://downloads.totallyfreecursors.com/cursor_files/gold_star.ani"), url("http://downloads.totallyfreecursors.com/thumbnails/gold_star.gif"), auto;
+    /*cursor: url("http://downloads.totallyfreecursors.com/cursor_files/gold_star.ani"), url("http://downloads.totallyfreecursors.com/thumbnails/gold_star.gif"), auto;*/
    }
 
 
@@ -91,4 +87,65 @@ body{
        transition: box-shadow 1s ease;
 
      } */
+    }
+
+    .checksign{
+        width:300px;
+        margin-left:auto;
+        margin-right:auto;
+        text-align:center!important;
+
+    }
+
+    .regform{
+        width:600px;
+        margin-left:auto;
+        margin-right:auto;
+        text-align:center!important;
+    }
+
+    .result-sign{
+text-align:center!important;
+    }
+
+    .page-footer{
+        background-color:black;
+        padding:20px;
+        opacity:80%;
+        margin-top:100px;
+    }
+
+   #tr{
+        padding:10px;
+    }
+    #zdsigns{
+    background-color:#FEF0EF;
+    padding:5rem;
+     width: 60%;
+     margin-left:auto;
+      margin-right:auto;
+    }
+
+    .error-message{
+    color:white;
+    background-color:#F67280;
+    padding:10px 15px;
+    width:fit-content;
+    border-radius:5px;
+    margin-left:auto;
+    margin-right:auto;
+    line-height:20px;
+    }
+
+    .errorlist{
+        color:white;
+    background-color:#F67280;
+    padding:1px 15px;
+    width:fit-content;
+    border-radius:5px;
+    text-align:left;
+    margin-left:auto;
+    margin-right:auto;
+    list-style:none;
+    line-height:20px;
     }

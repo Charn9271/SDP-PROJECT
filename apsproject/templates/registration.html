@@ -21,16 +21,57 @@
 
 {% block 'body' %}
 
-<h3 align="center" color="white"><u>Registration</u></h3>
+<h3 align="center" style="color:white;"><u>Registration</u></h3>
 
-<center>
+<div class="regform">
+    <div>
+        <p class="error-message">{{failmsg}}</p>
+    </div>
 <form method="post">
     {% csrf_token %}
-{{ form.as_p }}
+    {% if form.phone_number.errors %}
+        <div class="error-message" >
+            {{ form.phone_number.errors }}
+        </div>
+    {% endif %}
+
+    <div>
+        {{ form.fullname.label_tag }}
+        {{ form.fullname }}
+        {{ form.gender.label_tag }}
+        {{ form.gender }}
+        {{ form.dateofbirth.label_tag }}
+        {{ form.dateofbirth }}
+        {{ form.email.label_tag }}
+        {{ form.email }}
+        {% if form.email.errors %}
+        <div class="error-message" >
+            {{ form.email.errors }}
+        </div>
+    {% endif %}
+        {{ form.username.label_tag }}
+        {{ form.username }}
+        {% if form.username.errors %}
+        <div class="error-message" >
+            {{ form.username.errors }}
+        </div>
+    {% endif %}
+        {{ form.password.label_tag }}
+        {{ form.password }}
+        {% if form.password.errors %}
+            <div class="error-message">{{ form.password.errors }}</div>
+        {% endif %}
+         {{ form.contact.label_tag }}
+        {{ form.contact }}
+        {% if form.contact.errors %}
+            <div class="error-message">{{ form.contact.errors }}</div>
+        {% endif %}
+    </div>
+
     <br>
     <input type="submit" value="Register" class="button">
 </form>
-</center>
+</div>
 
 {% endblock %}
 

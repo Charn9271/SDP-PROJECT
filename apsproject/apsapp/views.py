@@ -67,8 +67,11 @@ def registration(request):
             msg="Successfully Registered"
             return render(request,"regsuccess.html",{"msg":msg})
         else:
-            return HttpResponse("Registraion Failed")
+            # return HttpResponse("Registraion Failed")
+            fail = "Registraion Failed"
+            return render(request, "registration.html", {"form": form, "failmsg": fail})
     return render(request,"registration.html",{"form":form})
+
 
 def userlogin(request):
     return render(request,"userlogin.html")

@@ -14,26 +14,34 @@
     <h1 style="color:white;" > What is your constellation sign ?</h1>
     </div>
     <h2 style="color:white;"> Enter your birthday. </h2>
+<div class="checksign">
+
 
 
 
     <p style="color:white;">Month:
-        <input type="number" size="25" id="month" min="1" max="12" >
+<input type="number" id="month" min="1" max="12" >
     </p>
 
-    <p style="color:white;" > Day:
+
+    <p style="color:white;" > Date:
         <input type="number" id="day" min="1" max="31">
     </p>
 
 
 
-    <a id="animated" onclick="zodiac()"  class="button">Find your zodiac sign! </a>
-    <p id="photo"></p>
-    <p id= "space" style="color:white;"> Your zodiac sign is <span id="output"></span> </p>
+    <a id="animated" onclick="zodiac()"  class="button" style="color:white;" >Find your zodiac sign! </a>
 
-    <p id="characteristic"></p>
+</div>
+    <div class="result-sign">
+        <p style="width:700px; text-align:center; margin-left:auto; margin-right:auto;" class="img-sign" id="photo"></p>
+        <p id= "space" style="color:white;"> Your zodiac sign is:<span id="output"></span> </p>
+        <h3 id="characteristic">Description</h3>
+    </div>
+<br><br><br><br><br>
+<div id="zdsigns">
     <img src="http://sweetclipart.com/multisite/sweetclipart/files/astrology_set_clipart_color_2.png" width=32%>
-
+</div>
     <script src="zodic.js"></script>
 {% endblock %}
 </body>

@@ -21,7 +21,7 @@ class Registration(models.Model):
     email=models.EmailField(max_length=100,blank=False,unique=True)
     username=models.CharField(max_length=100,blank=False,unique=True)
     password = models.CharField(max_length=100, blank=False)
-    contact = models.BigIntegerField(blank=False, unique=True, max_length=10)
+    contact = models.PositiveIntegerField(blank=False, unique=True, max_length=10)
     # location = models.CharField(max_length=100, blank=False)
     registrationtime=models.DateTimeField(blank=False,auto_now=True)
 

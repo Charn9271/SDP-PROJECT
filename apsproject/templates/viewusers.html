@@ -21,10 +21,11 @@
 
 <h2 align="center" style="color:white;"><u>View Registered Users</u></h2>
 
-Total Registered Users = {{count}}  <br>
-
-<table align="center" border="2">
-    <tr style="font-weight:bold" >
+<h4 style="color:white;" >Total Registered Users = {{count}}</h4>
+<br>
+<div >
+<table align="center" border="2" style="background-color: #580058;">
+    <tr id = "tr" style="font-weight:bold" >
         <td style="color:white;">ID</td>
         <td style="color:white;">Full Name</td>
         <td style="color:white;">Gender</td>
@@ -58,6 +59,7 @@ Total Registered Users = {{count}}  <br>
     {% endfor %}
 
 </table>
+    </div>
 
 {% endblock %}
 

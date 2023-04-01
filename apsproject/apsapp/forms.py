@@ -1,10 +1,23 @@
 from django import forms
 from .models import Registration,Department
+from django.core.validators import RegexValidator
+from django.contrib.auth.password_validation import validate_password
 
 class DateInput(forms.DateInput):
     input_type = "date"
 
 class RegistrationForm(forms.ModelForm):
+    password = forms.CharField(widget=forms.PasswordInput)
+    def clean_password(self):
+        password = self.cleaned_data.get('password')
+        try:
+            validate_password(password, self.instance)
+        except forms.ValidationError as error:
+            self.add_error('password', error)
+        return password
+
+    phone_regex = RegexValidator(regex=r'^[1-9]\d{9}$', message="Invalid phone number")
+    contact = forms.CharField(validators=[phone_regex])
     class Meta:
         model = Registration
         fields = "__all__"    # it will display all the fields in the form except default fields like id and registrationtime

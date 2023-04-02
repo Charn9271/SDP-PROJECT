@@ -1,0 +1,1 @@
+web: gunicorn apsproject/apsproject.wsgi --log-file -

@@ -2,3 +2,5 @@ venv/
 main.py
 .idea/
 __pycache__/
+.env
+db.sqlite3

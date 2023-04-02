@@ -1,8 +1,9 @@
-
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Django</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <title>User Home</title>
      <style>
 body {
 font-size: 16px;
@@ -20,20 +21,199 @@ height: 100%;
 }
 </style>
 </head>
+<style>
+
+* {
+   box-sizing: border-box;
+}
+.imageColumn {
+   float: left;
+   width: 25%;
+   padding: 10px;
+}
+
+        .navbar{
+            background-color: #B95889;
+            border-radius: 30px;
+
+        }
+        .navbar ul{
+            overflow: auto;
+        }
+        .navbar li{
+            float:left;
+            list-style: none;
+            margin: 13px 20px;
+
+        }
+        .navbar li a{
+            padding: 3px 3px;
+            text-decoration: none;
+            color: black;
+        }
+        .navbar li a:hover{
+            color: white
+        }
+
+        .search{
+            float: right;
+            color: white;
+            padding: 12px 75px;
+        }
+        .navbar input{
+            border: 2px solid black;
+            border-radius: 14px;
+            padding: 3px 17px;
+            width: 129px;
+        }
+        .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+}
+    </style>
 <body>
 {% block 'body' %}
 <h1 align=center style="color:white;">✨🌙Astrology Prediction System🌙✨</h1>
 <!--<hr color="black"><hr color="black">-->
 <br>
 
-<a href="{% url 'userhome' %}" style="color:white;">Home</a>&nbsp;&nbsp;
-<a href="{% url 'userlogout' %}" style="color:white;">Logout</a>
+<header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="{% url 'userhome' %}" style="color:white;">Home</a></li>
+<!--                <li><a href="{% url 'viewusers' %}" style="color:white;">View Users</a>&nbsp;</li>-->
+                <li><a href="{% url 'contactus' %}" style="color:white;">Contact Us</a>&nbsp;</li>
+               <div style="margin-left:auto; margin-right:50px; padding-top: 15px; width:fit-content;">
+                   <a style="text-decoration:none; color:white;" href="{% url 'userlogout' %}" style="color:white;">Logout</a>
+               </div>
+            </ul>
+        </nav>
+</header>
+
 
 <br><br>
 
 <h3 align="center" style="color:white;">Hi {{uname}}</h3>
 
-<h2 style="color:white;">I am in login Home</h2>
+</div>
+<div class="signs-home">
+<div class="card">
+  <img id="img" src="{% static 'images/aries.jpg' %}" alt="Aries" style="width:100%">
+  <div class="container">
+      <h4><b>Aries</b></h4>
+      <div>
+        <a href="https://www.horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=1" class="btn">View more</a>
+      </div>
+  </div>
+</div>
+<div class="card">
+  <img id="img" src="{% static 'images/tauras.jpg' %}" alt="Aries" style="width:100%">
+  <div class="container">
+      <h4><b>Taurus</b></h4>
+      <div>
+        <a href="https://www.horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=2" class="btn">View more</a>
+      </div>
+  </div>
+</div>
+<div class="card">
+  <img  id="img" src="{% static 'images/gemini.jpg' %}" alt="Aries" style="width:100%">
+  <div class="container">
+      <h4><b>Gemini </b></h4>
+      <div>
+        <a href="https://www.horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=3" class="btn">View more</a>
+      </div>
+  </div>
+</div>
+<div class="card">
+  <img id="img" src="{% static 'images/cancer.jpg' %}" alt="Aries" style="width:100%">
+  <div class="container">
+      <h4><b>Cancer </b></h4>
+      <div>
+        <a href="https://www.horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=4" class="btn">View more</a>
+      </div>
+  </div>
+</div>
+</div>
+
+<div class="signs-home">
+<div class="card">
+  <img  id="img" src="{% static 'images/leo.jpg' %}" alt="Aries" style="width:100%">
+  <div class="container">
+      <h4><b>Leo</b></h4>
+      <div>
+        <a href="https://www.horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=5" class="btn">View more</a>
+      </div>
+  </div>
+</div>
+<div class="card">
+  <img  id="img" src="{% static 'images/virgo.jpg' %}" alt="Aries" style="width:100%">
+  <div class="container">
+      <h4><b>Virgo</b></h4>
+      <div>
+        <a href="https://www.horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=6" class="btn">View more</a>
+      </div>
+  </div>
+</div>
+<div class="card">
+  <img  id="img" src="{% static 'images/libra.jpg' %}" alt="Aries" style="width:100%">
+  <div class="container">
+      <h4><b>Libra</b></h4>
+      <div>
+        <a href="https://www.horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=7" class="btn">View more</a>
+      </div>
+  </div>
+</div>
+<div class="card">
+  <img  id="img" src="{% static 'images/scorpio.jpg' %}" alt="Aries" style="width:100%">
+  <div class="container">
+      <h4><b>Scorpio</b></h4>
+      <div>
+        <a href="https://www.horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=8" class="btn">View more</a>
+      </div>
+  </div>
+</div>
+</div>
+
+<div class="signs-home">
+<div class="card">
+  <img  id="img" src="{% static 'images/sagitarius.jpg' %}" alt="Aries" style="width:100%">
+  <div class="container">
+      <h4><b>Sagitarius</b></h4>
+      <div>
+        <a href="https://www.horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=9" class="btn">View more</a>
+      </div>
+  </div>
+</div>
+<div class="card">
+  <img id="img" src="{% static 'images/capricorn.jpg' %}" alt="Aries" style="width:100%">
+  <div class="container">
+      <h4><b>Capricorn</b></h4>
+      <div>
+        <a href="https://www.horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=10" class="btn">View more</a>
+      </div>
+  </div>
+</div>
+<div class="card">
+  <img  id="img" src="{% static 'images/aquarius.jpg' %}" alt="Aries" style="width:100%">
+  <div class="container">
+      <h4><b>Aquarius</b></h4>
+      <div>
+        <a href="https://www.horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=11" class="btn">View more</a>
+      </div>
+  </div>
+</div>
+    <div class="card">
+  <img  id="img" src="{% static 'images/pisces.jpg' %}" alt="Aries" style="width:100%">
+  <div class="container">
+      <h4><b>pisces</b></h4>
+      <div>
+        <a href="https://www.horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=12" class="btn">View more</a>
+      </div>
+  </div>
+</div>
+</div>
 
 {% endblock %}
 </body>

@@ -61,6 +61,11 @@ height: 100%;
         .navbar li a:hover{
             color: white
         }
+
+        .hv:hover{
+            color: white
+        }
+
         .search{
             float: right;
             color: white;
@@ -114,18 +119,16 @@ height: 100%;
         <nav class="navbar">
             <ul>
               <li><a href="{% url 'index' %}">Home</a></li>
-                <li><a href="{% url 'registration' %}">Registration</a>&nbsp;&nbsp;</li>
-                <li><a href="{% url 'userlogin' %}">Login</a>&nbsp;</li>
-                <li><a href="{% url 'viewusers' %}">View Users</a>&nbsp;</li>
+<!--                <li><a href="{% url 'registration' %}">Registration</a>&nbsp;&nbsp;</li>-->
+<!--                <li><a href="{% url 'userlogin' %}">Login</a>&nbsp;</li>-->
+
                 <li><a href="{% url  'checksign'%}">Check Sign</a></li>
                 <li><a href="{% url 'about' %}"> About</a></li>
-<!--                <li><a href="{% url 'logindemo' %}">Login Demo</a>&nbsp;&nbsp;</li>-->
-                <!--<li><a href="{% url 'formdemo' %}">Form Handling</a>&nbsp;</li>-->
-                <!--<li><a href="{% url 'addemployee' %}">Add Employee</a>&nbsp;&nbsp;</li>-->
-<!--                <li><a href="{% url 'adddepartment' %}">Add Department</a></li>-->
-<!--                <li><a href="{% url 'updatedepartment' %}">Update Department</a></li>-->
-<!--                <li><a href="{% url 'setcookies' %}">Set Cookies</a></li>-->
-<!--                <li><a href="{% url 'getcookies' %}">Get Cookies</a></li>-->
+                <div style="margin-left:auto; margin-right:50px; padding-top: 15px; width:fit-content;">
+                    <a class="hv" style="text-decoration:none; color:black; margin-right:10px; hover:white;" href="{% url 'registration' %}" >Registration</a>
+                   <a class="hv" style="text-decoration:none; color:black; margin-left:10px;" hover="color:white;" href="{% url 'userlogin' %}" >Login</a>
+
+               </div>
             </ul>
         </nav>
 </header>
@@ -133,8 +136,124 @@ height: 100%;
 <br><br>
 
  {% block 'body' %}
-<div>
-       <h2 style="color:#FF0000;" >Welcome to Astrology Predictions </h2>
+<div id ="homeexp">
+       <h2 >Explore about Astrology </h2>
+</div>
+<div class="signs-home">
+<div class="card">
+  <img id="img" src="{% static 'images/aries.jpg' %}" alt="Aries" style="width:100%">
+  <div class="container">
+      <h4><b>Aries</b></h4>
+      <div>
+        <a href="https://www.horoscope.com/zodiac-signs/aries" class="btn">View more</a>
+      </div>
+  </div>
+</div>
+<div class="card">
+  <img id="img" src="{% static 'images/tauras.jpg' %}" alt="Aries" style="width:100%">
+  <div class="container">
+      <h4><b>Taurus</b></h4>
+      <div>
+        <a href="https://www.horoscope.com/zodiac-signs/taurus" class="btn">View more</a>
+      </div>
+  </div>
+</div>
+<div class="card">
+  <img  id="img" src="{% static 'images/gemini.jpg' %}" alt="Aries" style="width:100%">
+  <div class="container">
+      <h4><b>Gemini </b></h4>
+      <div>
+        <a href="https://www.horoscope.com/zodiac-signs/gemini" class="btn">View more</a>
+      </div>
+  </div>
+</div>
+<div class="card">
+  <img id="img" src="{% static 'images/cancer.jpg' %}" alt="Aries" style="width:100%">
+  <div class="container">
+      <h4><b>Cancer </b></h4>
+      <div>
+        <a href="https://www.horoscope.com/zodiac-signs/cancer" class="btn">View more</a>
+      </div>
+  </div>
+</div>
+</div>
+
+<div class="signs-home">
+<div class="card">
+  <img  id="img" src="{% static 'images/leo.jpg' %}" alt="Aries" style="width:100%">
+  <div class="container">
+      <h4><b>Leo</b></h4>
+      <div>
+        <a href="https://www.horoscope.com/zodiac-signs/leo" class="btn">View more</a>
+      </div>
+  </div>
+</div>
+<div class="card">
+  <img  id="img" src="{% static 'images/virgo.jpg' %}" alt="Aries" style="width:100%">
+  <div class="container">
+      <h4><b>Virgo</b></h4>
+      <div>
+        <a href="https://www.horoscope.com/zodiac-signs/virgo" class="btn">View more</a>
+      </div>
+  </div>
+</div>
+<div class="card">
+  <img  id="img" src="{% static 'images/libra.jpg' %}" alt="Aries" style="width:100%">
+  <div class="container">
+      <h4><b>Libra</b></h4>
+      <div>
+        <a href="https://www.horoscope.com/zodiac-signs/libra" class="btn">View more</a>
+      </div>
+  </div>
+</div>
+<div class="card">
+  <img  id="img" src="{% static 'images/scorpio.jpg' %}" alt="Aries" style="width:100%">
+  <div class="container">
+      <h4><b>Scorpio</b></h4>
+      <div>
+        <a href="https://www.horoscope.com/zodiac-signs/scorpio" class="btn">View more</a>
+      </div>
+  </div>
+</div>
+</div>
+
+<div class="signs-home">
+<div class="card">
+  <img  id="img" src="{% static 'images/sagitarius.jpg' %}" alt="Aries" style="width:100%">
+  <div class="container">
+      <h4><b>Sagitarius</b></h4>
+      <div>
+        <a href="https://www.horoscope.com/zodiac-signs/sagittarius" class="btn">View more</a>
+      </div>
+  </div>
+</div>
+<div class="card">
+  <img id="img" src="{% static 'images/capricorn.jpg' %}" alt="Aries" style="width:100%">
+  <div class="container">
+      <h4><b>Capricorn</b></h4>
+      <div>
+        <a href="https://www.horoscope.com/zodiac-signs/capricorn" class="btn">View more</a>
+      </div>
+  </div>
+</div>
+<div class="card">
+  <img  id="img" src="{% static 'images/aquarius.jpg' %}" alt="Aries" style="width:100%">
+  <div class="container">
+      <h4><b>Aquarius</b></h4>
+      <div>
+        <a href="https://www.horoscope.com/zodiac-signs/aquarius" class="btn">View more</a>
+      </div>
+  </div>
+</div>
+    <div class="card">
+  <img  id="img" src="{% static 'images/pisces.jpg' %}" alt="Aries" style="width:100%">
+  <div class="container">
+      <h4><b>pisces</b></h4>
+      <div>
+        <a href="https://www.horoscope.com/zodiac-signs/pisces" class="btn">View more</a>
+      </div>
+  </div>
+</div>
 </div>
  {% endblock %}
 

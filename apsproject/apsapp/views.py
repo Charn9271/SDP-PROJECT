@@ -105,6 +105,8 @@ def userlogout(request):
 def checksign(request):
     return render(request,"checksign.html")
 
+def contactusfunction(request):
+    return render(request,"contactus.html")
 def viewusers(request):
     usersdata = Registration.objects.all()
     userscount = Registration.objects.count()

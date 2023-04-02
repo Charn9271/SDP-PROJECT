@@ -31,6 +31,7 @@ urlpatterns = [
     path("getcookies",views.getcookies,name="getcookies"),
     path("checksign",views.checksign,name="checksign"),
     path("about",views.about,name="about"),
+    path("contactus",views.contactusfunction,name="contactus"),
 
 
 ]

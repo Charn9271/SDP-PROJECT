@@ -3,28 +3,16 @@ function zodiac(){
    var birthday = document.getElementById("day").value;
  var result = " unknown because you didn't put a valid date.";
 
-if (birthmonth<1||birthmonth>12){
-       alert("Please enter a valid date ! ");
-    }
 
-else if (birthmonth==2 && birthday>29){
-       alert("Please enter a valid  date ! ");
-    }
-
-else if (birthmonth == 1 || birthmonth == 3 || birthmonth == 5 || birthmonth == 7 || birthmonth == 8 && birthday>31){
-       alert("Please enter a valid date ! ");
-    }
-
-else if (birthmonth == 4 || birthmonth == 6 || birthmonth == 9 || birthmonth == 11 && birthday>30){
-       alert("Please enter a valid date ! ");
-    }
-
-else if (birthmonth == 1&& birthday >= 20 || birthmonth == 2 && birthday <= 18
+if (birthmonth == 1&& birthday >= 20 || birthmonth == 2 && birthday <= 18
     ){
         result = ("Aquarius");
      document.getElementById("photo").innerHTML="<img src='https://www.horoscope.com/images-US/signs/profile-aquarius.png'width=20%>";
    document.getElementById("characteristic").innerHTML="Aquarians are extremely vulnerable and sensitive. Although you may often find them being surrounded by many friends but in reality they rarely have close friends and acquaintances. Aquarius is a universal sign which makes them public people. Hence Aquarians are often associated with clubs, organizations and forums and enthusiastically participate in intellectual discussions. Aquarians are great communicators as long as they are within their mental realm.";
 
+    }
+else if (birthmonth == 2 && birthday> 29){
+       alert("Please enter a valid  date ! ");
     }
 
 else if (birthmonth == 2&& birthday >= 19 || birthmonth == 3&& birthday <= 20){
@@ -93,5 +81,22 @@ else if(birthmonth == 12 && birthday >= 22 || birthmonth == 1 && birthday <= 19)
      document.getElementById("photo").innerHTML="<img src='https://www.horoscope.com/images-US/signs/profile-capricorn.png'width=20%>";
      document.getElementById("characteristic").innerHTML="Members of this sign has an insatiable desire to climb higher and during this course they can also become selfish and might not hesitate to sacrifice other’s interests in fulfilling their goals.Capricorns may seem risk averse but in reality they carefully plan all their moves ahead and rehearse them to perfection.";
     }
+
+else if (birthmonth< 1 || birthmonth> 12){
+       alert("Please enter a valid date ! ");
+    }
+
+
+
+else if (birthmonth == 1 || birthmonth == 3 || birthmonth == 5 || birthmonth == 7 || birthmonth == 8 && birthday>31){
+       alert("Please enter a valid date ! ");
+    }
+
+else if (birthmonth == 4 || birthmonth == 6 || birthmonth == 9 || birthmonth == 11 && birthday> 30){
+       alert("Please enter a valid date ! ");
+    }
+
+
+
  document.getElementById("output").innerHTML= result;
 }

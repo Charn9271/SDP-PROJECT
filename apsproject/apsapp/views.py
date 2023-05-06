@@ -2,7 +2,7 @@ from django.db.models import Q
 from django.http import HttpResponse
 from django.shortcuts import render,redirect
 
-from .forms import RegistrationForm,DepartmentForm,UpdateDepartmentForm
+from .forms import RegistrationForm,DepartmentForm,UpdateDepartmentForm,FeedbackForm
 from .models import Employee,Registration,Department
 
 
@@ -183,5 +183,17 @@ def getcookies(request):
         response="COOKIES NOT FOUND"
 
     return HttpResponse(response)
-def Demofunction(request):
-    return render(request, "demo.html")
+
+
+def feedback(request):
+    if request.method == 'POST':
+        form = FeedbackForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('feedback_thankyou')
+    else:
+        form = FeedbackForm()
+    return render(request, 'feedback.html', {'form': form})
+
+def feedback_thankyou(request):
+    return render(request, 'feedback_thankyou.html')

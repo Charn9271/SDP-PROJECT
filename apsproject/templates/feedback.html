@@ -1,0 +1,17 @@
+<!-- feedback.html -->
+{% extends 'index.html' %}
+
+{% block 'body' %}
+<div class="container mt-5">
+  <div class="feedback-form">
+    <h2 style="color:white">Submit your feedback</h2>
+    <form method="POST">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="btn-feed btn-primary-feed">Submit</button>
+    </form>
+  </div>
+</div>
+{% endblock %}
+
+

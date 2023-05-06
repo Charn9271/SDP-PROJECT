@@ -13,6 +13,8 @@ class Employee(models.Model):
         db_table="employee_table"
 
 class Registration(models.Model):
+
+
     id=models.AutoField(primary_key=True)
     fullname=models.CharField(max_length=20,blank=False)
     gender_choices=( ("M","Male") , ("F","Female") , ("Others","Prefer not to say") )
@@ -39,3 +41,14 @@ class Department(models.Model):
 
     class Meta:
         db_table = "department_table"
+
+class Feedback(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    rating_choices = (("1", "1"), ("2", "2"), ("3", "3"), ("4", "4"), ("5", "5"))
+    rating = models.PositiveIntegerField( choices=rating_choices)
+    message = models.TextField()
+    date_added = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name

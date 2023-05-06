@@ -32,7 +32,8 @@ urlpatterns = [
     path("checksign",views.checksign,name="checksign"),
     path("about",views.about,name="about"),
     path("contactus",views.contactusfunction,name="contactus"),
-    path("demo",views.Demofunction,name="demo"),
+    path('feedback/', views.feedback, name='feedback'),
+    path('feedback/thankyou/', views.feedback_thankyou, name='feedback_thankyou'),
 
 
 ]

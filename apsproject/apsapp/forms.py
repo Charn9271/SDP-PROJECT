@@ -1,5 +1,5 @@
 from django import forms
-from .models import Registration,Department
+from .models import Registration,Department, Feedback
 from django.core.validators import RegexValidator
 from django.contrib.auth.password_validation import validate_password
 
@@ -37,3 +37,16 @@ class UpdateDepartmentForm(forms.ModelForm):
         fields = "__all__"
         labels = {"dept_id": "Enter ID","dept_location": "Select Location","dept_hod": "Provide HOD"}
         exclude = {"dept_name",}
+
+class FeedbackForm(forms.ModelForm):
+    class Meta:
+        model = Feedback
+        fields = ['name', 'email', 'rating', 'message']
+        widgets = {
+            'name': forms.TextInput(attrs={'class': 'form-control',"placeholder":"Enter your name"}),
+            'email': forms.EmailInput(attrs={'class': 'form-control',"placeholder":"Enter your email"}),
+            'message': forms.Textarea(attrs={'class': 'form-control', 'rows': 5}),
+        }
+        labels = {
+            "message":"Write your feedback here"
+        }

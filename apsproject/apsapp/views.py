@@ -183,3 +183,5 @@ def getcookies(request):
         response="COOKIES NOT FOUND"
 
     return HttpResponse(response)
+def Demofunction(request):
+    return render(request, "demo.html")

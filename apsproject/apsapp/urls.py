@@ -32,6 +32,7 @@ urlpatterns = [
     path("checksign",views.checksign,name="checksign"),
     path("about",views.about,name="about"),
     path("contactus",views.contactusfunction,name="contactus"),
+    path("demo",views.Demofunction,name="demo"),
 
 
 ]

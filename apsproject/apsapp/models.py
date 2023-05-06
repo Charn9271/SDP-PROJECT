@@ -46,7 +46,7 @@ class Feedback(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField()
     rating_choices = (("1", "1"), ("2", "2"), ("3", "3"), ("4", "4"), ("5", "5"))
-    rating = models.PositiveIntegerField( choices=rating_choices)
+    rating = models.CharField(max_length=5, choices=rating_choices)
     message = models.TextField()
     date_added = models.DateTimeField(auto_now_add=True)
 

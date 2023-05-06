@@ -1,9 +1,9 @@
 from django.db.models import Q
 from django.http import HttpResponse
 from django.shortcuts import render,redirect
-
+from django.views.generic import ListView
 from .forms import RegistrationForm,DepartmentForm,UpdateDepartmentForm,FeedbackForm
-from .models import Employee,Registration,Department
+from .models import Employee,Registration,Department,Feedback
 
 
 def indexfunction(request):
@@ -197,3 +197,7 @@ def feedback(request):
 
 def feedback_thankyou(request):
     return render(request, 'feedback_thankyou.html')
+
+class DisplayFeedback(ListView):
+    model = Feedback
+    template_name = "display_feedback.html"

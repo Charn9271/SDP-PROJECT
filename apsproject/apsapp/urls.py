@@ -34,6 +34,6 @@ urlpatterns = [
     path("contactus",views.contactusfunction,name="contactus"),
     path('feedback/', views.feedback, name='feedback'),
     path('feedback/thankyou/', views.feedback_thankyou, name='feedback_thankyou'),
-
+    path('display_feedback/', views.DisplayFeedback.as_view(), name='display_feedback'),
 
 ]

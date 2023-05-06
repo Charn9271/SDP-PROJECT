@@ -90,11 +90,11 @@ WSGI_APPLICATION = 'apsproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'APSDB',
+        'NAME': 'APSDB1',
         'USER': 'root',
-        'PASSWORD': 'Charan@2004',
+        'PASSWORD': '32583',
         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
+        'PORT': '3307',
     }
 }
 
